@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1 — 2026-04-19
+
+- Fix: plugin failed to activate on Rider 2026.1 because the
+  `ApplicationInitializedListener.execute` signature was tightened. Switched the
+  startup hook to `ProjectActivity` + `postStartupActivity`, which is accepted
+  unchanged across 2024.1 through 2026.x. Icon now also shows correctly (switched
+  from PNG to SVG, which is the only format JetBrains renders for plugin icons).
+
 ## 0.1.0 — 2026-04-19
 
 Initial release.

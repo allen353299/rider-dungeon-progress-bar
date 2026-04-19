@@ -30,8 +30,10 @@
     <depends>com.intellij.modules.rider</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationInitializedListener
-                implementation="com.allen.dungeonprogress.DungeonStartupListener"/>
+        <!-- ProjectActivity fires on first project open, works 2024.1 through 2026+.
+             ApplicationInitializedListener's execute signature got tightened in 2026.1
+             and started rejecting overrides compiled against older SDKs. -->
+        <postStartupActivity implementation="com.allen.dungeonprogress.DungeonStartupListener"/>
     </extensions>
 
     <applicationListeners>
