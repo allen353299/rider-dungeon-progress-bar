@@ -1,0 +1,68 @@
+<idea-plugin>
+    <id>com.allen.dungeonprogress</id>
+    <name>Tica Dungeon Progress Bar</name>
+    <vendor email="allen353299@gmail.com">Allen Huang</vendor>
+    <description><![CDATA[
+      <h2>Tica Dungeon Progress Bar</h2>
+      <p>Replace Rider's progress bars with a pixel-art dungeon-crawler animation
+      starring <b>Tica the orca warrior</b>. Indexing, building, plugin updates —
+      every progress bar becomes a tiny adventure.</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li><b>4 stages</b> driven by progress percent: Cellar &rarr; Ruins &rarr; Core &rarr; Treasury, each with a different hero outfit.</li>
+        <li><b>Boss battle</b> from 70% onward — a giant red bug visibly collapses through 4 frames as the bar fills.</li>
+        <li><b>Treasure chest</b> opens at 100% with a "LOOT FOUND" plate.</li>
+        <li><b>Indeterminate mode</b>: hero surrounded by three orbiting skeletons.</li>
+        <li><b>Critical-hit pop-up</b> when progress jumps by 20% or more.</li>
+        <li>Cached sprite scaling — per-frame paint is a pure blit, no measurable EDT cost.</li>
+      </ul>
+
+      <p><b>Compatibility:</b> Rider 2024.2 and newer.</p>
+    ]]></description>
+    <change-notes><![CDATA[
+      <h3>0.1.0</h3>
+      <p>Initial release. Replaces every JProgressBar with the dungeon animation,
+      including boss battle, treasure chest finale, indeterminate mode, and critical-hit
+      pop-up.</p>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.rider</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationInitializedListener
+                implementation="com.allen.dungeonprogress.DungeonStartupListener"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.allen.dungeonprogress.DungeonLafListener"
+                  topic="com.intellij.ide.ui.LafManagerListener"/>
+    </applicationListeners>
+
+    <actions>
+        <!-- internal="true" hides these debug actions from production users.
+             They only show when Rider is launched with -Didea.is.internal=true,
+             which the gradle runIde sandbox sets automatically. -->
+        <action id="DungeonProgress.FakeProgress"
+                class="com.allen.dungeonprogress.debug.FakeProgressAction"
+                internal="true"
+                text="Tica Dungeon: Fake 0_100"
+                description="Demo progress bar 0 to 100">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="DungeonProgress.FakeJumpy"
+                class="com.allen.dungeonprogress.debug.FakeJumpyAction"
+                internal="true"
+                text="Tica Dungeon: Fake Jumpy (test CRITICAL!)"
+                description="Demo progress bar that jumps 25% per step">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="DungeonProgress.FakeIndeterminate"
+                class="com.allen.dungeonprogress.debug.FakeIndeterminateAction"
+                internal="true"
+                text="Tica Dungeon: Fake Indeterminate"
+                description="Demo indeterminate progress bar">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
