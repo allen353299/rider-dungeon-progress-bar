@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 — 2026-04-19
+
+- Fix: on Rider 2026.1 the plugin loaded but the progress bar didn't change.
+  Root cause: `ProjectActivity` only fires after a project opens, so on the
+  welcome screen the AWT hook was never installed and new JProgressBars stayed
+  with the default UI. Now the full install chain (UIManager + AWT hook +
+  force-upgrade existing bars) also runs from `LafManagerListener`, which
+  fires during initial LAF setup. Verified in a 2024.2 sandbox immediately
+  after IDE startup.
+
 ## 0.1.1 — 2026-04-19
 
 - Fix: plugin failed to activate on Rider 2026.1 because the
