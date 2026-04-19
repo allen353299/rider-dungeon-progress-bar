@@ -28,6 +28,7 @@ intellijPlatform {
             untilBuild = provider { null }
         }
     }
+
 }
 
 kotlin {
