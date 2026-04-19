@@ -1,10 +1,10 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.2.0"
-    id("org.jetbrains.intellij.platform") version "2.1.0"
+    id("org.jetbrains.intellij.platform") version "2.7.0"
 }
 
 group = "com.allen"
-version = "0.1.2"
+version = "0.1.3"
 
 repositories {
     mavenCentral()

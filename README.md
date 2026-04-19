@@ -4,6 +4,8 @@ Replace JetBrains Rider's progress bars with a pixel-art dungeon-crawler animati
 starring **Tica the orca warrior**. Indexing, building, plugin updates — every progress
 bar in Rider becomes a tiny adventure.
 
+![Dungeon progress bar — full run from Cellar to Treasury](docs/demo-main.gif)
+
 ## Stages
 
 Progress percent maps to a dungeon depth and a hero outfit:
@@ -20,13 +22,20 @@ collapses through 4 frames as the bar fills.
 
 ## Special modes
 
-- **Indeterminate**: Tica fights three orbiting skeletons.
-- **Critical hit**: when progress jumps by ≥20% in one update, a "CRITICAL!" pop-up
-  bounces over the hero.
+**Indeterminate** — Tica fights three orbiting skeletons:
+
+![Indeterminate mode — hero surrounded by skeletons](docs/demo-indeterminate.gif)
+
+**Critical hit** — when progress jumps by ≥20% in one update, a "CRITICAL!" pop-up
+bounces over the hero:
+
+![Critical hit pop-up](docs/demo-critical.gif)
 
 ## Requirements
 
 - JetBrains Rider 2024.2 or newer.
+
+Verified on 2024.2 sandbox, 2025.1 sandbox, and Rider 2026.1 (production install).
 
 ## Install
 
