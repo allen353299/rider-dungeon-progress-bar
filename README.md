@@ -56,7 +56,7 @@ Run a sandbox Rider with the plugin pre-installed:
 
 ## Asset pipeline
 
-Source PNGs live in `D:\test\asset\` (or your local equivalent). The pre-build script
+Source PNGs live in [`assets-source/`](assets-source/). The pre-build script
 `tools/resize_assets.py` downsamples them with nearest-neighbour resampling and removes
 white backgrounds via 4-corner flood-fill, writing the optimized assets into
 `src/main/resources/assets/`.
@@ -64,6 +64,10 @@ white backgrounds via 4-corner flood-fill, writing the optimized assets into
 ```
 py tools/resize_assets.py
 ```
+
+Re-run this whenever you change anything under `assets-source/`. Both the source PNGs
+and the resized output are committed so a fresh clone can build without running the
+pipeline.
 
 ## Limits / known issues
 
