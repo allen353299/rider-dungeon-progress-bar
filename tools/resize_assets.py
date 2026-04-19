@@ -12,8 +12,9 @@ import numpy as np
 from PIL import Image
 from scipy.ndimage import label
 
-SOURCE = r"D:\test\asset"
-TARGET = r"D:\test\rider-dungeon-progress\src\main\resources\assets"
+_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SOURCE = os.path.join(_REPO, "assets-source")
+TARGET = os.path.join(_REPO, "src", "main", "resources", "assets")
 
 PLAN: dict[str, tuple[int, int]] = {
     "bg2.png":            (800, 246),
