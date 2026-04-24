@@ -8,8 +8,6 @@
       starring <b>Tica the orca warrior</b>. Indexing, building, plugin updates —
       every progress bar becomes a tiny adventure.</p>
 
-      <p><img src="https://raw.githubusercontent.com/allen353299/rider-dungeon-progress-bar/main/docs/demo-main.gif" alt="Full run — Cellar to Treasury"/></p>
-
       <h3>Features</h3>
       <ul>
         <li><b>4 stages</b> driven by progress percent: Cellar &rarr; Ruins &rarr; Core &rarr; Treasury, each with a different hero outfit.</li>
@@ -20,13 +18,8 @@
         <li>Cached sprite scaling — per-frame paint is a pure blit, no measurable EDT cost.</li>
       </ul>
 
-      <h3>Indeterminate mode</h3>
-      <p><img src="https://raw.githubusercontent.com/allen353299/rider-dungeon-progress-bar/main/docs/demo-indeterminate.gif" alt="Indeterminate mode"/></p>
-
-      <h3>Critical hit</h3>
-      <p><img src="https://raw.githubusercontent.com/allen353299/rider-dungeon-progress-bar/main/docs/demo-critical.gif" alt="Critical hit pop-up"/></p>
-
       <p><b>Compatibility:</b> Rider 2024.2 and newer. Verified on 2024.2, 2025.1, and 2026.1.</p>
+      <p>Animated demos live in the <a href="https://github.com/allen353299/rider-dungeon-progress-bar#readme">project README</a>.</p>
     ]]></description>
     <change-notes><![CDATA[
       <h3>0.1.0</h3>
@@ -72,6 +65,13 @@
                 internal="true"
                 text="Tica Dungeon: Fake Indeterminate"
                 description="Demo indeterminate progress bar">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="DungeonProgress.FakeFullDemo"
+                class="com.allen.dungeonprogress.debug.FakeFullDemoAction"
+                internal="true"
+                text="Tica Dungeon: Fake Full Demo (15s)"
+                description="Scripted 15s sequence for recording marketing GIFs">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>

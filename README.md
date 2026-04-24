@@ -24,7 +24,7 @@ collapses through 4 frames as the bar fills.
 
 **Indeterminate** — Tica fights three orbiting skeletons:
 
-![Indeterminate mode — hero surrounded by skeletons](docs/demo-indeterminate.gif)
+![Indeterminate mode — hero surrounded by skeletons](docs/demo-indeterminate-v2.gif)
 
 **Critical hit** — when progress jumps by ≥20% in one update, a "CRITICAL!" pop-up
 bounces over the hero:
