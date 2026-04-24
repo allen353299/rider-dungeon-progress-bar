@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.4 — 2026-04-24
+
+- Indeterminate mode now plays the full dungeon fight as a ~16.5s loop instead
+  of a static skeleton orbit. Phases: orbit skeletons (2s) → climb 0–70% with
+  outfit swaps (3.2s) → boss battle 70–100% (3.9s) → chest opens (2s) →
+  indeterminate bridge (1s) → 4 critical jumps with `CRITICAL!` pop-ups (4.5s).
+  Timings mirror `FakeFullDemoAction` so the look matches the determinate demo.
+- Add internal `Tica Dungeon: Fake Full Demo (15s)` action for recording the
+  full sequence (only visible with `-Didea.is.internal=true`).
+- Swap the README indeterminate GIF for a pixel-perfect script-generated
+  version (200×20 native render, NEAREST 3× upscale); standalone Marketplace
+  logo PNGs (40/256/512 px) added under `docs/`.
+
 ## 0.1.3 — 2026-04-19
 
 - Add demo GIFs (main run, indeterminate, critical hit) and wire them into the

@@ -110,13 +110,6 @@ class DungeonProgressBarUI : BasicProgressBarUI() {
         try {
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
             g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR)
-            TrackRenderer.drawBackground(g2, w, h)
-            // dim the whole bar so the orbiting hero pops out
-            val prev = g2.composite
-            g2.composite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.30f)
-            g2.color = Color.BLACK
-            g2.fillRect(0, 0, w, h)
-            g2.composite = prev
             IndeterminateRenderer.draw(g2, w, h)
         } finally {
             g2.dispose()
