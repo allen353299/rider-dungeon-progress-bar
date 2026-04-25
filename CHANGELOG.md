@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.5 — 2026-04-25
+
+- Refine the Marketplace description to focus on Tica's gear progression
+  (robed swordsman → silver-armored warrior → gold-armored flame-sword
+  champion) instead of the inaccurate "different outfit per stage" claim
+  (Treasury reuses Core's outfit). Also drops the README footer link from
+  the description.
+- Add an internal `Tica Dungeon: Showcase Window (loop)` action that opens
+  a 1100×320 standalone window with a 1000×100 progress bar and loops the
+  full demo sequence forever. Designed for clean high-resolution screen
+  recordings; only visible with `-Didea.is.internal=true`.
+
 ## 0.1.4 — 2026-04-24
 
 - Indeterminate mode now plays the full dungeon fight as a ~16.5s loop instead
