@@ -10,16 +10,15 @@
 
       <h3>Features</h3>
       <ul>
-        <li><b>4 stages</b> driven by progress percent: Cellar &rarr; Ruins &rarr; Core &rarr; Treasury, each with a different hero outfit.</li>
+        <li><b>4 stages</b> driven by progress percent: Tica sprints tirelessly across a mossy, torch-lit stone dungeon, gearing up from robed swordsman &rarr; silver-armored warrior &rarr; gold-armored flame-sword champion.</li>
         <li><b>Boss battle</b> from 70% onward — a giant red bug visibly collapses through 4 frames as the bar fills.</li>
         <li><b>Treasure chest</b> opens at 100% with a "LOOT FOUND" plate.</li>
         <li><b>Indeterminate mode</b>: hero surrounded by three orbiting skeletons.</li>
         <li><b>Critical-hit pop-up</b> when progress jumps by 20% or more.</li>
-        <li>Cached sprite scaling — per-frame paint is a pure blit, no measurable EDT cost.</li>
+        <li><b>Cached sprite scaling</b> — per-frame paint is a pure blit, no measurable EDT cost.</li>
       </ul>
 
       <p><b>Compatibility:</b> Rider 2024.2 and newer. Verified on 2024.2, 2025.1, and 2026.1.</p>
-      <p>Animated demos live in the <a href="https://github.com/allen353299/rider-dungeon-progress-bar#readme">project README</a>.</p>
     ]]></description>
     <change-notes><![CDATA[
       <h3>0.1.0</h3>
@@ -72,6 +71,13 @@
                 internal="true"
                 text="Tica Dungeon: Fake Full Demo (15s)"
                 description="Scripted 15s sequence for recording marketing GIFs">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="DungeonProgress.Showcase"
+                class="com.allen.dungeonprogress.debug.FakeShowcaseAction"
+                internal="true"
+                text="Tica Dungeon: Showcase Window (loop)"
+                description="Open a 1000x100 progress bar in a standalone window and loop the demo sequence forever; ideal for high-resolution screen recording">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>
